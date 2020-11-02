@@ -106,7 +106,7 @@ trait BuildsQueries
                 return false;
             }
 
-            $lastId = $results->last()->{$alias};
+            $lastId = ((object)$results->last())->{$alias};
 
             unset($results);
 
